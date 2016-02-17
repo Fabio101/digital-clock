@@ -1,0 +1,63 @@
+body {
+    background-image: url("../img/advert.jpg");
+    z-index: 1;
+}
+
+.clock {
+    color: #FFFFFF;
+    background-color: grey;
+    border: 1px solid grey;
+    border-top-left-radius: 25px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    z-index: 2;
+}
+
+ul {
+    list-style: none;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    margin-right: 15px;
+}
+
+ul li {
+    display: inline;
+    font-size: 8em;
+}
+
+#point {
+    position: relative;
+    -moz-animation: blink 1s ease infinite;
+    -webkit-animation: blink 1s ease infinite;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Animations */
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+         opacity: 1.0;
+    };	
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1.0;
+    };
+}

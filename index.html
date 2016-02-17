@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Advert</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/master.css" />
+  <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+<div class="clock">
+  <ul id="clock">
+    <li id="hours"></li>
+    <li id="point">:</li>
+    <li id="min"></li>
+    <li id="point">:</li>
+    <li id="sec"></li>
+  </ul>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  //Our digital clock overlay
+  setInterval( function() {
+  // Create a newDate() object and extract the seconds, minutes and hours...
+    var seconds = new Date().getSeconds();
+    var minutes = new Date().getMinutes();
+    var hours = new Date().getHours();
+    // Add a leading zero to time values when they run into single digits
+    $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+    $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+    $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+  },1000);
+	
+});
+</script>
