@@ -23,7 +23,6 @@ ul {
 
 ul li {
     display: inline;
-    font-size: 8em;
 }
 
 #point {
@@ -61,4 +60,12 @@ ul li {
     100% {
         opacity: 1.0;
     };
+}
+
+@media screen and (min-width: 799px){
+    ul li {font-size: 6em;}
+}
+
+@media screen and (max-width: 1919px){
+    ul li {font-size: 4em;}
 }
