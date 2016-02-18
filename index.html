@@ -4,11 +4,10 @@
   <meta charset=utf-8 />
   <title>Advert</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/master.css" />
-  <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 </head>
 <body>
 <div class="clock">
-  <ul id="clock">
+  <ul>
     <li id="hours"></li>
     <li id="point">:</li>
     <li id="min"></li>
@@ -19,15 +18,18 @@
 </body>
 </html>
 
+<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 
   //Our digital clock overlay
   setInterval( function() {
-  // Create a newDate() object and extract the seconds, minutes and hours...
-    var seconds = new Date().getSeconds();
-    var minutes = new Date().getMinutes();
-    var hours = new Date().getHours();
+  $(".clock").css("visibility", "visible");
+  // Create a new Date() object and extract the seconds, minutes and hours...
+    var time = new Date();
+    var seconds = time.getSeconds();
+    var minutes = time.getMinutes();
+    var hours = time.getHours();
     // Add a leading zero to time values when they run into single digits
     $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
     $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
